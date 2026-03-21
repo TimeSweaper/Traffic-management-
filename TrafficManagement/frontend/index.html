@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Traffic Simulation</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="header">
+            <h2> Smart Traffic System</h2>
+            <div class="status">
+                Cars: <span id="cars">0</span>
+                Ambulance: <span id="ambulances">0</span>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="map">
+                <canvas id="canvas"></canvas>
+            </div>
+
+            <div class="sidebar">
+                <h3>Intersection Control</h3>
+                <h4>Traffic Light</h4>
+                <div id="currentGreen">None</div>
+
+                <h4>Lane Occupancy</h4>
+                <div>North: <span id="northCount">0</span></div>
+                <div>South: <span id="southCount">0</span></div>
+                <div>East:  <span id="eastCount">0</span></div>
+                <div>West:  <span id="westCount">0</span></div>
+
+                <h4>Add Vehicle</h4>
+
+                <select id="type">
+                    <option value="car">Car</option>
+                    <option value="ambulance">Ambulance</option>
+                </select>
+
+                <select id="lane">
+                    <option value="north"> North Lane</option>
+                    <option value="south"> South Lane</option>
+                    <option value="east">  East Lane</option>
+                    <option value="west">  West Lane</option>
+                </select>
+
+                <button onclick="addVehicle()">Dispatch Vehicle</button>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
